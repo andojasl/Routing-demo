@@ -1,0 +1,78 @@
+{
+  "name": "demo-routing",
+  "displayName": "demo_routing",
+  "description": "demo project to learn routing in vs code webview",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/out-tsc/ext-src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "demo-routing.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "demo-routing.openHome",
+        "title": "open home"
+      },
+      {
+        "command": "demo-routing.openAbout",
+        "title": "open about"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "build": "tsc",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "dependencies": {
+    "@angular/animations": "^17.0.8",
+    "@angular/cdk": "^17.3.9",
+    "@angular/common": "^17.0.8",
+    "@angular/compiler": "^17.0.8",
+    "@angular/core": "^17.0.8",
+    "@angular/forms": "^17.0.8",
+    "@angular/material": "^17.3.9",
+    "@angular/platform-browser": "^17.0.8",
+    "@angular/platform-browser-dynamic": "^17.0.8",
+    "@angular/router": "^17.0.8",
+    "@types/sqlite3": "^3.1.11",
+    "axios": "^1.7.2",
+    "rxjs": "~7.8.1",
+    "sqlite3": "^5.1.7",
+    "vscode-test": "^1.6.1",
+    "zone.js": "~0.14.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.0.8",
+    "@angular-eslint/builder": "17.1.1",
+    "@angular-eslint/eslint-plugin": "17.1.1",
+    "@angular-eslint/eslint-plugin-template": "17.1.1",
+    "@angular-eslint/schematics": "17.1.1",
+    "@angular-eslint/template-parser": "17.1.1",
+    "@angular/cli": "^17.0.8",
+    "@angular/compiler-cli": "^17.0.8",
+    "@angular/language-service": "^17.0.8",
+    "@types/axios": "^0.14.0",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.89.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "prettier": "^3.1.1",
+    "ts-node": "~10.9.2",
+    "typescript": "^5.4.5",
+    "vsce": "^2.15.0"
+  }
+}
